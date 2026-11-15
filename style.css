@@ -80,16 +80,30 @@ h1 {
 /* MEDIA VIEW 1: Desktop / large screens
    3 cards in one row (default layout above). */
 
+
 /* MEDIA VIEW 2: Tablet / medium screens */
-@media (max-width: 900px) {
+
+/* MEDIA VIEW 2: Tablet / medium screens */
+@media (min-width: 601px) and (max-width: 900px) {
   body {
-    padding: 32px 18px;
+    padding: 32px 24px;
   }
 
   .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .card {
+    padding: 24px;
   }
 }
+
+
 
 
 /* MEDIA VIEW 3: Mobile / small screens */
