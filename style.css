@@ -1,0 +1,114 @@
+
+/* Base styles: apply to all screen sizes */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #263238;
+  background: #f4f6f5;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 2rem;
+  color: #203a3a;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e1e8e5;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(32, 58, 58, 0.06);
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  background: #edf4f1;
+  border-radius: 14px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: #203a3a;
+}
+
+.card p {
+  margin: 0 0 20px;
+  line-height: 1.7;
+  color: #687775;
+}
+
+.card a {
+  display: inline-block;
+  padding: 10px 18px;
+  color: #ffffff;
+  background: #286a68;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background: #205452;
+}
+
+
+/* MEDIA VIEW 1: Desktop / large screens
+   3 cards in one row (default layout above). */
+
+/* MEDIA VIEW 2: Tablet / medium screens */
+@media (max-width: 900px) {
+  body {
+    padding: 32px 18px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* MEDIA VIEW 3: Mobile / small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 28px 16px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 28px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
